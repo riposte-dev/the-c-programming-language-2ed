@@ -1,1 +1,2 @@
-# the-c-programming-language-2ed
+# The C Programming Language (2nd Edition)
+A repository made for educational use, containing coding examples and exercises from the second edition of the book *The C Programming Language* by Brian Kernighan and Dennis Ritchie.
