@@ -15,3 +15,37 @@ To use `.txt` files as input for testing programs, run:
 ```bash
 ./a.out < test.txt
 ```
+### Windows
+Windows requires more steps at first as it doesn't come with a C compiler by default.
+
+Although there are many options, we will install the [GCC](https://gcc.gnu.org/) compiler via [MinGW-w64](https://www.mingw-w64.org/getting-started/msys2/). Follow the installation instructions for `Windows / MSYS2 (GCC)`.
+
+To use GCC outside of MSYS2, we need to add it to our PATH environment variable.
+
+Use Windows search to open Control Panel.
+
+Then search for "View advanced system settings."
+
+Open "Environment Variables..."
+
+Under "System variables," find a variable named `Path`.
+
+Click new and add the path `C:\msys64\ucrt64\bin`.
+
+Press OK out of everything. Restart the terminal if necessary.
+
+Run `cc` in terminal to check.
+
+Compile `.c` files by running:
+```shell
+cc hello.c -o a.exe
+```
+
+This will create a file named `a.exe` which you can execute by running `.\a.exe`.
+
+To use `.txt` files as input for testing programs, run:
+```shell
+cat test.txt | .\a.exe
+```
+
+\* The command `cat test.txt` simply retrieves the contents of `test.txt`.
