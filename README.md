@@ -6,7 +6,7 @@ MacOS should already have a C compiler installed. Run `cc` in terminal to check.
 
 Compile `.c` files by running:
 ```bash
-cc hello.c
+cc path/to/file.c
 ```
 
 This will create a file named `a.out` which you can execute by running `./a.out`.
@@ -31,7 +31,7 @@ Run `cc` in terminal to check.
 
 Compile `.c` files by running:
 ```shell
-cc hello.c -o a.exe
+cc path\to\file.c -o a.exe
 ```
 
 This will create a file named `a.exe` which you can execute by running `.\a.exe`.
