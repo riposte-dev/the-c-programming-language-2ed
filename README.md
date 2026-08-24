@@ -41,3 +41,5 @@ To use `.txt` files as input for testing programs, run:
 cat test.txt | .\a.exe
 ```
 (where the command `cat test.txt` simply retrieves the contents of `test.txt`).
+
+Windows security may block `.exe` from running. In which case, temporarily turn off security, run the program, and turn security back on. It is recommended to compile your programs to the same name like `a.exe` so that Windows security recognizes it as a safe file.
