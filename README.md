@@ -11,7 +11,7 @@ Go to Preferences > Settings and search for the Code-runner plugin:
 - Enable "Clear Previous Output"
 - Enable "Save File Before Run"
 ### Compilers
-C is a compiled language, meaning we need to turn it into machine code before executing it. 
+C is a compiled language, meaning we need to turn it into machine code before executing it.
 #### MacOS
 MacOS should already have a C compiler installed. Run `clang --version` to check.
 
@@ -30,6 +30,10 @@ To use `.txt` files as input for testing programs, run:
 ```bash
 ./a.out < test.txt
 ```
+#### Linux
+Linux should already have a C compiler installed. Run `gcc --version` to check.
+
+If not, run `sudo apt-get update` and then `sudo apt-get install build-essential gdb` (Sorry `pacman` users).
 #### Windows
 Windows requires more steps at first as it doesn't come with a C compiler by default.
 
