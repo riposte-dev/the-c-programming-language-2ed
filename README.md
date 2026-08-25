@@ -46,7 +46,9 @@ To use GCC outside of MSYS2, we need to add it to our PATH environment variable:
 - Click new and add the path `C:\msys64\ucrt64\bin`.
 - Press OK out of everything. Restart the terminal if necessary.
 
-Run `cc` in terminal to check.
+If you're having trouble, follow along [this video](https://youtu.be/2ciUcosJFBc?t=388) instead.
+
+Run `gcc --version` in terminal to check.
 
 Compile `.c` files by running:
 ```shell
