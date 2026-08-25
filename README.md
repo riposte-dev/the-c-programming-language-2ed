@@ -1,7 +1,7 @@
 # The C Programming Language (2nd Edition)
 A repository made for educational use, containing coding examples and exercises from the second edition of the book *The C Programming Language* by Brian Kernighan and Dennis Ritchie.
 ## Setting Up
-To write code, we need a code editor! Install [VS Code](https://code.visualstudio.com/), an integrated development environment (IDE).
+To write code, we need a code editor! Install [VS Code](https://code.visualstudio.com/), a popular integrated development environment (IDE).
 ### Extensions
 Upon opening VS Code, head to the Extensions tab (Ctrl+Shift+X) and install these two extensions (they will come in handy):
 - [C/C++ Extension Pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools-extension-pack)
@@ -28,7 +28,7 @@ Although there are many options, we will install the [GCC](https://gcc.gnu.org/)
 To use GCC outside of MSYS2, we need to add it to our PATH environment variable:
 - Use Windows search to open Control Panel.
 - In Control Panel, search for "View advanced system settings" and open "Environment Variables..."
-- Under "System variables," find the variable `Path`.
+- Under "System variables," find the variable "Path".
 - Click new and add the path `C:\msys64\ucrt64\bin`.
 - Press OK out of everything. Restart the terminal if necessary.
 
@@ -40,29 +40,29 @@ Run `gcc --version` in terminal to check.
 
 Although we will use the Code Runner extension to execute our programs swiftly, you can always use the terminal to compile and run code.
 
-On MacOS, compile `.c` files by running:
+On MacOS, compile .c files by running:
 ```bash
 cc path/to/file.c -o a.out
 ```
 
-This will create a file named `a.out` which you can execute by running `./a.out`.
+This will create a file named "a.out" which you can execute by running `./a.out`.
 
-To use `.txt` files as input for testing programs, run:
+To use .txt files as input for testing programs, run:
 ```bash
 ./a.out < test.txt
 ```
 
-On Windows, compile `.c` files by running:
+On Windows, compile .c files by running:
 ```shell
 cc path\to\file.c -o a.exe
 ```
 
-This will create a file named `a.exe` which you can manually execute by running `.\a.exe`.
+This will create a file named "a.exe" which you can execute by running `.\a.exe`.
 
-To use `.txt` files as input for testing programs, run:
+To use .txt files as input for testing programs, run:
 ```shell
 cat test.txt | .\a.exe
 ```
-(where the command `cat test.txt` simply retrieves the contents of `test.txt`).
+(where the command `cat test.txt` simply retrieves the contents of "test.txt").
 
 Windows Security may block .exe programs from running. If this is the case, try opening VS Code as an administrator.
