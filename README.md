@@ -63,4 +63,4 @@ cat test.txt | .\a.exe
 ```
 (where the command `cat test.txt` simply retrieves the contents of `test.txt`).
 
-Windows security may block `.exe` from running. In which case, temporarily turn off security, run the program, and turn security back on. It is recommended to compile your programs to the same name like `a.exe` so that Windows security recognizes it as a safe file.
+Windows Security may block .exe programs from running. Try opening VS Code as an administrator.
