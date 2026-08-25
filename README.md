@@ -1,7 +1,9 @@
 # The C Programming Language (2nd Edition)
 A repository made for educational use, containing coding examples and exercises from the second edition of the book *The C Programming Language* by Brian Kernighan and Dennis Ritchie.
+
 ## Setting Up
 To write code, we need a code editor! Install [VS Code](https://code.visualstudio.com/), a popular integrated development environment (IDE).
+
 ### Extensions
 Upon opening VS Code, head to the Extensions tab (Ctrl+Shift+X) and install these two extensions (they will come in handy):
 - [C/C++ Extension Pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools-extension-pack)
@@ -10,8 +12,10 @@ Upon opening VS Code, head to the Extensions tab (Ctrl+Shift+X) and install thes
 Go to Preferences > Settings and search for the Code-runner plugin:
 - Enable "Clear Previous Output"
 - Enable "Save File Before Run"
+
 ### Compilers
 C is a compiled language, meaning we need to turn it into machine code before executing it. The installation process is a little different for each operating system, so follow the one that matches your machine!
+
 #### Windows
 Windows requires more steps at first as it doesn't come with a C compiler by default.
 
@@ -27,10 +31,12 @@ To use GCC outside of MSYS2, we need to add it to our PATH environment variable:
 If you're having trouble, follow along [this video](https://youtu.be/2ciUcosJFBc?t=388) instead.
 
 Run `gcc --version` in terminal to check.
+
 #### MacOS
 MacOS should already have a C compiler installed. Run `clang --version` to check.
 
 If not, run `xcode-select --install` to install Command Line Tools.
+
 #### Linux
 Linux should already have a C compiler installed. Run `gcc --version` to check.
 
