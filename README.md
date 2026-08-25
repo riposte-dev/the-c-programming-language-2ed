@@ -12,14 +12,6 @@ Go to Preferences > Settings and search for the Code-runner plugin:
 - Enable "Save File Before Run"
 ### Compilers
 C is a compiled language, meaning we need to turn it into machine code before executing it. The installation process is a little different for each operating system, so follow the one that matches your machine!
-#### MacOS
-MacOS should already have a C compiler installed. Run `clang --version` to check.
-
-If not, run `xcode-select --install` to install Command Line Tools.
-#### Linux
-Linux should already have a C compiler installed. Run `gcc --version` to check.
-
-If not, run `sudo apt-get update` and then `sudo apt-get install build-essential gdb` (Sorry `pacman` users).
 #### Windows
 Windows requires more steps at first as it doesn't come with a C compiler by default.
 
@@ -35,22 +27,18 @@ To use GCC outside of MSYS2, we need to add it to our PATH environment variable:
 If you're having trouble, follow along [this video](https://youtu.be/2ciUcosJFBc?t=388) instead.
 
 Run `gcc --version` in terminal to check.
+#### MacOS
+MacOS should already have a C compiler installed. Run `clang --version` to check.
+
+If not, run `xcode-select --install` to install Command Line Tools.
+#### Linux
+Linux should already have a C compiler installed. Run `gcc --version` to check.
+
+If not, run `sudo apt-get update` and then `sudo apt-get install build-essential gdb` (Sorry `pacman` users).
 
 ---
 
 Although we will use the Code Runner extension to execute our programs swiftly, you can always use the terminal to compile and run code.
-
-On MacOS, compile .c files by running:
-```bash
-cc path/to/file.c -o a.out
-```
-
-This will create a file named "a.out" which you can execute by running `./a.out`.
-
-To use .txt files as input for testing programs, run:
-```bash
-./a.out < test.txt
-```
 
 On Windows, compile .c files by running:
 ```shell
@@ -66,3 +54,15 @@ cat test.txt | .\a.exe
 (where the command `cat test.txt` simply retrieves the contents of "test.txt").
 
 Windows Security may block .exe programs from running. If this is the case, try opening VS Code as an administrator.
+
+On MacOS, compile .c files by running:
+```bash
+cc path/to/file.c -o a.out
+```
+
+This will create a file named "a.out" which you can execute by running `./a.out`.
+
+To use .txt files as input for testing programs, run:
+```bash
+./a.out < test.txt
+```
