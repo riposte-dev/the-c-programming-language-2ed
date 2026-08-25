@@ -3,7 +3,7 @@ A repository made for educational use, containing coding examples and exercises 
 ## Setting Up
 To write code, we need a code editor! Install [VS Code](https://code.visualstudio.com/), an integrated development environment (IDE).
 ### Extensions
-Upon opening VS Code, head to the Extensions tab (Ctrl + Shift + X) and install these two extensions (they will come in handy):
+Upon opening VS Code, head to the Extensions tab (Ctrl+Shift+X) and install these two extensions (they will come in handy):
 - [C/C++ Extension Pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools-extension-pack)
 - [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner)
 
