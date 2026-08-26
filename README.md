@@ -13,10 +13,10 @@ Go to Preferences > Settings and search for the Code-runner plugin:
 - Enable "Clear Previous Output"
 - Enable "Save File Before Run"
 
-### Compilers
+## Compilers
 C is a compiled language, meaning we need to turn it into machine code before executing it. The installation process is a little different for each operating system, so follow the one that matches your machine!
 
-#### Windows
+### Windows
 Windows requires more steps at first as it doesn't come with a C compiler by default.
 
 Although there are many options, we will install the [GCC](https://gcc.gnu.org/) compiler via [MinGW-w64](https://www.mingw-w64.org/getting-started/msys2/). Follow the installation process for "Windows / MSYS2 (GCC)."
@@ -32,12 +32,12 @@ If you're having trouble, follow along [this video](https://youtu.be/2ciUcosJFBc
 
 Run `gcc --version` in terminal to check.
 
-#### MacOS
+### MacOS
 MacOS should already have a C compiler installed. Run `clang --version` to check.
 
 If not, run `xcode-select --install` to install Command Line Tools.
 
-#### Linux
+### Linux
 Linux should already have a C compiler installed. Run `gcc --version` to check.
 
 If not, run `sudo apt-get update` and then `sudo apt-get install build-essential gdb` (Sorry `pacman` users).
