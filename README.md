@@ -24,7 +24,7 @@ Although there are many options, we will install the [GCC](https://gcc.gnu.org/)
 To use GCC outside of MSYS2, we need to add it to our PATH environment variable:
 - Use Windows search to open Control Panel.
 - In Control Panel, search for "View advanced system settings" and open "Environment Variables..."
-- Under "System variables," find the variable "Path".
+- Under "System variables," find the variable "Path" and press "Edit..."
 - Click new and add the path `C:\msys64\ucrt64\bin`.
 - Press OK out of everything. Restart the terminal if necessary.
 
