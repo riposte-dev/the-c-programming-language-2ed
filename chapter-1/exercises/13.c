@@ -35,9 +35,9 @@ int main() {
 
     printf("Length\tOccurences\n"); // Print heading
     for (int j = 1; j < MAX_LENGTH + 1; ++j) {
-        printf("%6d\t", j); // Print a column for word lengths (1, 2, 3...)
+        printf("%6d\t", j); // Print word length on the left column (1, 2, 3...)
 
-        // Print a bar that corresponds to the number of occurences for each word with a given length
+        // Print number of occurences on the right column
         for (int k = 1; k < lengths[j] + 1; ++k) {
             printf("|");
         }
