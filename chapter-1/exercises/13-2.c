@@ -33,5 +33,13 @@ int main() {
         }
     }
 
+    // Create a 2-dimensional array for drawing the histogram bars from bottom up
+    int histogram[top_length][MAX_LENGTH]; // top_length x MAX_LENGTH
+    for (int n = 1; n < top_length + 1; ++n) {
+        for (int k = 1; k < MAX_LENGTH + 1; ++k) {
+            histogram[n][k] = 0;
+        }
+    }
+
     return 0;
 }
