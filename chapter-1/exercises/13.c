@@ -27,8 +27,9 @@ int main() {
         }
     }
 
+    printf("Length\tOccurences\n");
     for (int j = 1; j < MAX_LENGTH + 1; ++j) {
-        printf("%3d\t", j);
+        printf("%6d\t", j);
 
         for (int k = 1; k < lengths[j] + 1; ++k) {
             printf("|");
