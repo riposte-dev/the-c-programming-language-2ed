@@ -1,3 +1,9 @@
+/*
+Exercise 1-13.
+Write a program to print a histogram of the lengths of words in its input.
+It is easy to draw the histogram with the bars horizontal;
+a vertical orientation is more challenging.
+*/
 #include <stdio.h>
 
 #define MAX_LENGTH 20 // Maximum length of a word
@@ -18,8 +24,8 @@ int main() {
         if (c == ' ' || c == '\n' || c == '\t') {
             state = OUT;
 
-            ++lengths[length]; // Increment the number count for words with a length of length
-            length = 0; // Reset length counter for new word
+            ++lengths[length];
+            length = 0; // Reset length counter when c is outside a word
         } else {
             state = IN;
 
@@ -27,10 +33,11 @@ int main() {
         }
     }
 
-    printf("Length\tOccurences\n");
+    printf("Length\tOccurences\n"); // Print heading
     for (int j = 1; j < MAX_LENGTH + 1; ++j) {
-        printf("%6d\t", j);
+        printf("%6d\t", j); // Print a column for word lengths (1, 2, 3...)
 
+        // Print a bar that corresponds to the number of occurences for each word with a given length
         for (int k = 1; k < lengths[j] + 1; ++k) {
             printf("|");
         }
