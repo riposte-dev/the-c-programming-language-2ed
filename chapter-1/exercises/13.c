@@ -17,14 +17,11 @@ int main() {
     while ((c = getchar()) != EOF) {
         if (c == ' ' || c == '\n' || c == '\t') {
             state = OUT;
+            ++lengths[length]; // Increment the number count for words with a given length
+            length = 0; // Reset length counter for new word
         } else {
             state = IN;
-            ++length;
-        }
-
-        if (state == OUT) {
-            ++lengths[length];
-            length = 0;
+            ++length; // So long as c is inside a word, continue incrementing the length
         }
     }
 
