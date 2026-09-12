@@ -15,20 +15,21 @@ int main() {
     state = OUT;
     length = 0;
     while ((c = getchar()) != EOF) {
-        if (c == ' ' || c == '\n' || c == '\t')
+        if (c == ' ' || c == '\n' || c == '\t') {
             state = OUT;
-        else {
+        } else {
             state = IN;
             ++length;
         }
 
         if (state == OUT) {
-            printf("%d\n", length);
-            putchar('\n');
+            ++lengths[length];
             length = 0;
-        } else
-            putchar(c);
+        }
     }
+
+    for (int j = 1; j < MAX_LENGTH + 1; ++j)
+        printf("(%d, %d)\n", j, lengths[j]);
 
     return 0;
 }
