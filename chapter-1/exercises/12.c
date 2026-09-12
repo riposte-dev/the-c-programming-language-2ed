@@ -5,7 +5,7 @@
 
 int main()
 {
-    int c, nw, state;
+    int c, state;
 
     state = OUT;
     while ((c = getchar()) != EOF) {
