@@ -5,7 +5,7 @@
 #define OUT 0 // Outside a word
 
 int main() {
-    int c, state;
+    int c, state, length;
     int lengths[MAX_LENGTH];
 
     // Initialize array (A word needs to be at least one letter, so i > 0)
@@ -13,15 +13,20 @@ int main() {
         lengths[i] = 0;
 
     state = OUT;
+    length = 0;
     while ((c = getchar()) != EOF) {
         if (c == ' ' || c == '\n' || c == '\t')
             state = OUT;
-        else
+        else {
             state = IN;
+            ++length;
+        }
 
-        if (state == OUT)
+        if (state == OUT) {
+            printf("%d\n", length);
             putchar('\n');
-        else
+            length = 0;
+        } else
             putchar(c);
     }
 
