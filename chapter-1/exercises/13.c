@@ -21,9 +21,8 @@ int main() {
         if (c == ' ' || c == '\n' || c == '\t') {
             ++lengths[length];
             length = 0; // Reset length counter when c is outside a word
-        } else {
+        } else
             ++length; // So long as c is inside a word, continue incrementing the length
-        }
     }
 
     printf("Length\tOccurences\n"); // Print heading
@@ -31,9 +30,8 @@ int main() {
         printf("%6d\t", j); // Print word length on the left column (1, 2, 3...)
 
         // Print number of occurences on the right column
-        for (int k = 1; k < lengths[j] + 1; ++k) {
+        for (int k = 1; k < lengths[j] + 1; ++k)
             printf("|");
-        }
 
         printf("\n");
     }
