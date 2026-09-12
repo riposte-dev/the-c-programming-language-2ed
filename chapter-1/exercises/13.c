@@ -17,16 +17,25 @@ int main() {
     while ((c = getchar()) != EOF) {
         if (c == ' ' || c == '\n' || c == '\t') {
             state = OUT;
-            ++lengths[length]; // Increment the number count for words with a given length
+
+            ++lengths[length]; // Increment the number count for words with a length of length
             length = 0; // Reset length counter for new word
         } else {
             state = IN;
+
             ++length; // So long as c is inside a word, continue incrementing the length
         }
     }
 
-    for (int j = 1; j < MAX_LENGTH + 1; ++j)
-        printf("(%d, %d)\n", j, lengths[j]);
+    for (int j = 1; j < MAX_LENGTH + 1; ++j) {
+        printf("%3d\t", j);
+
+        for (int k = 1; k < lengths[j] + 1; ++k) {
+            printf("|");
+        }
+
+        printf("\n");
+    }
 
     return 0;
 }
