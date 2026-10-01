@@ -9,29 +9,29 @@ a vertical orientation is more challenging.
 #define MAX_LENGTH 20 // Maximum length of a word
 
 int main() {
-    int c, length;
+    int c, length = 0;
     int lengths[MAX_LENGTH];
 
-    // Initialize array (A word needs to be at least one letter, so i > 0)
-    for (int i = 1; i < MAX_LENGTH + 1; ++i)
+    // Initialize array
+    for (int i = 0; i < MAX_LENGTH; ++i)
         lengths[i] = 0;
 
-    length = 0;
+    // Count word lengths
     while ((c = getchar()) != EOF) {
         if (c == ' ' || c == '\n' || c == '\t') {
-            ++lengths[length];
+            ++lengths[length - 1]; // Since array starts at index 0, we subtract 1 to get the proper index
             length = 0; // Reset length counter when c is outside a word
         } else
-            ++length; // So long as c is inside a word, continue incrementing the length
+            ++length; // While c is inside a word, continue incrementing the length
     }
 
+    // Print histogram
     printf("Length\tOccurences\n"); // Print heading
-    for (int j = 1; j < MAX_LENGTH + 1; ++j) {
-        printf("%6d\t", j); // Print word length on the left column (1, 2, 3...)
+    for (int j = 0; j < MAX_LENGTH; ++j) {
+        printf("%6d\t", j + 1); // Print "Length" (1, 2, 3, ...)
 
-        // Print number of occurences on the right column
-        for (int k = 1; k < lengths[j] + 1; ++k)
-            printf("■");
+        for (int k = 0; k < lengths[j]; ++k)
+            printf("■"); // Print "Occurences"
 
         printf("\n");
     }
