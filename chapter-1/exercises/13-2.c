@@ -54,10 +54,10 @@ int main() {
 
     for (int k = 0; k < maxHeight; ++k) {
         for (int x = 0; x < (upperBound - lowerBound); ++x) {
-            if (lengths[x] < (maxHeight - k))
-                printf("\t");
-            else
-                printf("■");
+            if (lengths[x] < (maxHeight - k)) {
+                printf(" \t");
+            } else
+                printf("■\t");
         }
 
         printf("\n");
