@@ -42,8 +42,34 @@ int main() {
         }
     }
 
+    int upperLength = 0;
+
+    for (int p = 0; p < MAX_LENGTH; ++p) {
+        if (upperLength < lengths[p])
+            upperLength = lengths[p];
+    }
+
     // Print histogram
-    printf("Length\tOccurences\n"); // Print heading
+    printf("Word Lengths\n"); // Print heading
+
+    for (int j = 0; j < (upperBound - lowerBound); ++j) {
+        printf("%d\t", j + 1);
+    }
+
+    printf("\n");
+
+    /*
+    for (int j = lowerBound; j < upperBound; ++j) {
+        for (int k = lowerBound; k < upperBound; ++k) {
+            if (lengths[j - 1] < j)
+                printf("  ");
+            else
+                printf("■");
+        }
+
+        printf("\n");
+    }
+
     for (int j = lowerBound; j <= upperBound; ++j) {
         printf("%6d\t", j); // Print "Length" (1, 2, 3, ...)
 
@@ -52,6 +78,7 @@ int main() {
 
         printf("\n");
     }
+    */
 
     return 0;
 }
