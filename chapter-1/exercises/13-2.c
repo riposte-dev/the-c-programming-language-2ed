@@ -53,7 +53,7 @@ int main() {
     printf("Word Lengths\n"); // Print heading
 
     for (int k = 0; k < maxHeight; ++k) {
-        for (int x = 0; x < (upperBound - lowerBound); ++x) {
+        for (int x = 0; x < (upperBound - lowerBound) + 1; ++x) {
             if (lengths[x] < (maxHeight - k)) {
                 printf(" \t");
             } else
@@ -64,7 +64,7 @@ int main() {
     }
 
     // Print horizontal axis units
-    for (int j = 0; j < (upperBound - lowerBound); ++j) {
+    for (int j = 0; j < (upperBound - lowerBound) + 1; ++j) {
         printf("%d\t", j + 1);
     }
 
