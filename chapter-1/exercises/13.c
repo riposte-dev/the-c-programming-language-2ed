@@ -31,7 +31,7 @@ int main() {
 
         // Print number of occurences on the right column
         for (int k = 1; k < lengths[j] + 1; ++k)
-            printf("|");
+            printf("■");
 
         printf("\n");
     }
