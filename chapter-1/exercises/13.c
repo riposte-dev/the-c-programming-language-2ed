@@ -25,12 +25,29 @@ int main() {
             ++length; // While c is inside a word, continue incrementing the length
     }
 
+    // Find lower and upper bounds (So that the histogram isn't largely empty space)
+    int lowerBound, upperBound;
+
+    for (int n = 0; n < MAX_LENGTH; ++n) {
+        if (lengths[n] != 0) {
+            lowerBound = n + 1;
+            break;
+        }
+    }
+
+    for (int m = MAX_LENGTH - 1; m > 0; --m) {
+        if (lengths[m] != 0) {
+            upperBound = m + 1;
+            break;
+        }
+    }
+
     // Print histogram
     printf("Length\tOccurences\n"); // Print heading
-    for (int j = 0; j < MAX_LENGTH; ++j) {
-        printf("%6d\t", j + 1); // Print "Length" (1, 2, 3, ...)
+    for (int j = lowerBound; j <= upperBound; ++j) {
+        printf("%6d\t", j); // Print "Length" (1, 2, 3, ...)
 
-        for (int k = 0; k < lengths[j]; ++k)
+        for (int k = 0; k < lengths[j - 1]; ++k)
             printf("■"); // Print "Occurences"
 
         printf("\n");
