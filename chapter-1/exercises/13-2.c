@@ -9,36 +9,48 @@ a vertical orientation is more challenging.
 #define MAX_LENGTH 20 // Maximum length of a word
 
 int main() {
-    int c, length;
+    int c, length = 0;
     int lengths[MAX_LENGTH];
 
-    // Initialize array (A word needs to be at least one letter, so i > 0)
-    for (int i = 1; i < MAX_LENGTH + 1; ++i)
+    // Initialize array
+    for (int i = 0; i < MAX_LENGTH; ++i)
         lengths[i] = 0;
 
-    length = 0;
+    // Count word lengths
     while ((c = getchar()) != EOF) {
         if (c == ' ' || c == '\n' || c == '\t') {
-            ++lengths[length];
+            ++lengths[length - 1]; // Since array starts at index 0, we subtract 1 to get the proper index
             length = 0; // Reset length counter when c is outside a word
         } else
-            ++length; // So long as c is inside a word, continue incrementing the length
+            ++length; // While c is inside a word, continue incrementing the length
     }
 
-    // Find the most commonly occuring length of a word
-    int top_length = 0;
-    for (int j = 1; j < MAX_LENGTH + 1; ++j) {
-        if (lengths[j] > top_length) {
-            top_length = lengths[j];
+    // Find lower and upper bounds (So that the histogram isn't largely empty space)
+    int lowerBound, upperBound;
+
+    for (int n = 0; n < MAX_LENGTH; ++n) {
+        if (lengths[n] != 0) {
+            lowerBound = n + 1;
+            break;
         }
     }
 
-    // Create a 2-dimensional array for drawing the histogram bars from bottom up
-    int histogram[top_length][MAX_LENGTH]; // top_length x MAX_LENGTH
-    for (int n = 1; n < top_length + 1; ++n) {
-        for (int k = 1; k < MAX_LENGTH + 1; ++k) {
-            histogram[n][k] = 0;
+    for (int m = MAX_LENGTH - 1; m > 0; --m) {
+        if (lengths[m] != 0) {
+            upperBound = m + 1;
+            break;
         }
+    }
+
+    // Print histogram
+    printf("Length\tOccurences\n"); // Print heading
+    for (int j = lowerBound; j <= upperBound; ++j) {
+        printf("%6d\t", j); // Print "Length" (1, 2, 3, ...)
+
+        for (int k = 0; k < lengths[j - 1]; ++k)
+            printf("■"); // Print "Occurences"
+
+        printf("\n");
     }
 
     return 0;
