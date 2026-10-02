@@ -5,9 +5,9 @@
 
 int main() {
     int c, length = 0;
-    int lengths[MAX_LENGTH];
 
     // Initialize array
+    int lengths[MAX_LENGTH];
     for (int i = 0; i < MAX_LENGTH; ++i)
         lengths[i] = 0;
 
