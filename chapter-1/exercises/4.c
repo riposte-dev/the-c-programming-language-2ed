@@ -1,6 +1,6 @@
+// Exercise 1-4. Write a program to print the corresponding Celsius to Fahrenheit table.
 #include <stdio.h>
 
-/* print Celsius-Fahrenheit table for celsius = 0, 20, ..., 300 */
 int main()
 {
     float celsius, fahr;
@@ -15,7 +15,7 @@ int main()
     celsius = lower;
     while (celsius <= upper) {
         fahr = ((9.0/5.0)*(celsius)) + 32.0;
-        printf("%7.0f\t%10.1f\n", celsius, fahr);
+        printf("%7.0f\t%10.1f\n", celsius, fahr); /* print each column as wide as their unit name */
         celsius += step;
     }
 }

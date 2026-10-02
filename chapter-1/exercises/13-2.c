@@ -1,9 +1,4 @@
-/*
-Exercise 1-13-2. (Vertical Orientation)
-Write a program to print a histogram of the lengths of words in its input.
-It is easy to draw the histogram with the bars horizontal;
-a vertical orientation is more challenging.
-*/
+// Exercise 1-13. Write a program to print a histogram of the lengths of words in its input. It is easy to draw the histogram with the bars horizontal; a vertical orientation is more challenging.
 #include <stdio.h>
 
 #define MAX_LENGTH 20 // Maximum length of a word
