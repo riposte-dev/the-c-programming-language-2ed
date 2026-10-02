@@ -12,13 +12,15 @@ int main() {
     for (int i = 0; i < MAX_LENGTH; ++i)
         lengths[i] = 0;
 
-    // Count word lengths
+    // Count the lengths of words
     while ((c = getchar()) != EOF) {
         if (c == ' ' || c == '\n' || c == '\t') {
-            ++lengths[length - 1]; // Since array starts at index 0, we subtract 1 to get the proper index
-            length = 0; // Reset length counter when c is outside a word
+            // Outside word
+            ++lengths[length - 1]; // Since index starts at 0, subtract 1 to get the corresponding index for length
+            length = 0; // Reset length counter
         } else
-            ++length; // While c is inside a word, continue incrementing the length
+            // Inside word
+            ++length;
     }
 
     // Find lower and upper bounds (So that the histogram isn't largely empty space)
