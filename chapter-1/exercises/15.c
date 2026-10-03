@@ -1,6 +1,8 @@
 // Exercise 1-15. Rewrite the temperature conversion program of Section 1.2 to use a function for conversion.
 #include <stdio.h>
 
+float fahrenheitToCelsius(float fahr);
+
 /* print Fahrenheit-Celsius table for fahr = 0, 20, ..., 300; floating-point version */
 int main()
 {
@@ -19,4 +21,8 @@ int main()
     }
 
     return 0;
+}
+
+float fahrenheitToCelsius(float fahr) {
+    return (5.0/9.0) * (fahr-32.0);
 }
