@@ -22,26 +22,26 @@ int main() {
     int lowerBound, upperBound;
 
     // Find lower and upper bounds (So that the histogram isn't largely empty space)
-    for (int n = 0; n < MAX_LENGTH; ++n) {
-        if (lengths[n] != 0) {
-            lowerBound = n + 1;
+    for (int i = 0; i < MAX_LENGTH; ++i) {
+        if (lengths[i] != 0) {
+            lowerBound = i + 1;
             break;
         }
     }
 
-    for (int m = MAX_LENGTH - 1; m > 0; --m) {
-        if (lengths[m] != 0) {
-            upperBound = m + 1;
+    for (int i = MAX_LENGTH - 1; i > 0; --i) {
+        if (lengths[i] != 0) {
+            upperBound = i + 1;
             break;
         }
     }
 
     // Print histogram
     printf("Length\tOccurences\n"); // Print heading
-    for (int j = lowerBound; j <= upperBound; ++j) {
-        printf("%6d\t", j); // Print "Length" (1, 2, 3, ...)
+    for (int i = lowerBound; i <= upperBound; ++i) {
+        printf("%6d\t", i); // Print "Length" (1, 2, 3, ...)
 
-        for (int k = 0; k < lengths[j - 1]; ++k)
+        for (int j = 0; j < lengths[i - 1]; ++j)
             printf("■"); // Print "Occurences"
 
         printf("\n");
