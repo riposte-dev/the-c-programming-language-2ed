@@ -22,14 +22,14 @@ int main() {
     // Find lower and upper bounds (So that the histogram only shows relevant data)
     for (int i = 0; i < MAX_LENGTH; ++i) {
         if (lengths[i] != 0) {
-            lowerBound = i + 1;
+            lowerBound = i;
             break;
         }
     }
 
     for (int i = MAX_LENGTH - 1; i > 0; --i) {
         if (lengths[i] != 0) {
-            upperBound = i + 1;
+            upperBound = i;
             break;
         }
     }
@@ -37,8 +37,9 @@ int main() {
     int maxHeight = 0;
 
     for (int i = 0; i < MAX_LENGTH; ++i) {
-        if (maxHeight < lengths[i])
+        if (maxHeight < lengths[i]) {
             maxHeight = lengths[i];
+        }
     }
 
     // Print histogram
