@@ -21,17 +21,17 @@ int main() {
 
     int lowerBound, upperBound;
 
-    // Find lower and upper bounds (So that the histogram isn't largely empty space)
+    // Find lower and upper bounds (So that the histogram only shows relevant data)
     for (int i = 0; i < MAX_LENGTH; ++i) {
         if (lengths[i] != 0) {
-            lowerBound = i + 1;
+            lowerBound = i;
             break;
         }
     }
 
     for (int i = MAX_LENGTH - 1; i > 0; --i) {
         if (lengths[i] != 0) {
-            upperBound = i + 1;
+            upperBound = i;
             break;
         }
     }
@@ -39,9 +39,9 @@ int main() {
     // Print histogram
     printf("Length\tOccurences\n"); // Print heading
     for (int i = lowerBound; i <= upperBound; ++i) {
-        printf("%6d\t", i); // Print "Length" (1, 2, 3, ...)
+        printf("%6d\t", i + 1); // Print "Length" (1, 2, 3, ...)
 
-        for (int j = 0; j < lengths[i - 1]; ++j)
+        for (int j = 0; j < lengths[i]; ++j)
             printf("■"); // Print "Occurences"
 
         printf("\n");
