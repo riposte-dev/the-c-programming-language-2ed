@@ -2,5 +2,16 @@
 #include <stdio.h>
 
 int main() {
+    int c;
+
+    while ((c = getchar())) {
+        printf("%d ", c - '0');
+
+        if (c == EOF) {
+            break;
+        }
+    }
+    printf("\n");
+
     return 0;
 }
