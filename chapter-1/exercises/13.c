@@ -14,14 +14,12 @@ int main() {
             // Outside word
             ++lengths[length - 1]; // Since index starts at 0, subtract 1 to get the corresponding index for length
             length = 0; // Reset length counter
+        } else if (c == EOF) {
+            ++lengths[length - 1];
+            break;
         } else {
             // Inside word
             ++length;
-        }
-        
-        if (c == EOF) {
-            ++lengths[length - 2];
-            break;
         }
     }
 
