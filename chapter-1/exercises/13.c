@@ -45,8 +45,9 @@ int main() {
     for (int i = lowerBound; i <= upperBound; ++i) {
         printf("%6d\t", i + 1); // Print "Length" (1, 2, 3, ...)
 
-        for (int j = 0; j < lengths[i]; ++j)
+        for (int j = 0; j < lengths[i]; ++j) {
             printf("■"); // Print "Occurences"
+        }
 
         printf("\n");
     }
