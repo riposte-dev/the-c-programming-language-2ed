@@ -6,10 +6,7 @@
 int main() {
     int c, length = 0;
 
-    // Initialize array
-    int lengths[MAX_LENGTH];
-    for (int i = 0; i < MAX_LENGTH; ++i)
-        lengths[i] = 0;
+    int lengths[MAX_LENGTH] = {0}; // Initialize array with all elements set to 0
 
     // Count the lengths of words
     while ((c = getchar()) != EOF) {
