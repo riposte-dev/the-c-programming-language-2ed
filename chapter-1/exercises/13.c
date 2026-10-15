@@ -9,7 +9,7 @@ int main() {
     int lengths[MAX_LENGTH] = {0}; // Initialize array with all elements set to 0
 
     // Count the lengths of words
-    while ((c = getchar()) != EOF) {
+    while ((c = getchar())) {
         if (c == ' ' || c == '\n' || c == '\t') {
             // Outside word
             ++lengths[length - 1]; // Since index starts at 0, subtract 1 to get the corresponding index for length
@@ -17,6 +17,11 @@ int main() {
         } else
             // Inside word
             ++length;
+
+        if (c == EOF) {
+            ++lengths[length - 2];
+            break;
+        }
     }
 
     int lowerBound, upperBound;
