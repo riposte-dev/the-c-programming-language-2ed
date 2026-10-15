@@ -17,36 +17,36 @@ int main() {
             ++length; // While c is inside a word, continue incrementing the length
     }
 
-    // Find lower and upper bounds (So that the histogram isn't largely empty space)
     int lowerBound, upperBound;
 
-    for (int n = 0; n < MAX_LENGTH; ++n) {
-        if (lengths[n] != 0) {
-            lowerBound = n + 1;
+    // Find lower and upper bounds (So that the histogram only shows relevant data)
+    for (int i = 0; i < MAX_LENGTH; ++i) {
+        if (lengths[i] != 0) {
+            lowerBound = i + 1;
             break;
         }
     }
 
-    for (int m = MAX_LENGTH - 1; m > 0; --m) {
-        if (lengths[m] != 0) {
-            upperBound = m + 1;
+    for (int i = MAX_LENGTH - 1; i > 0; --i) {
+        if (lengths[i] != 0) {
+            upperBound = i + 1;
             break;
         }
     }
 
     int maxHeight = 0;
 
-    for (int p = 0; p < MAX_LENGTH; ++p) {
-        if (maxHeight < lengths[p])
-            maxHeight = lengths[p];
+    for (int i = 0; i < MAX_LENGTH; ++i) {
+        if (maxHeight < lengths[i])
+            maxHeight = lengths[i];
     }
 
     // Print histogram
     printf("Word Lengths\n"); // Print heading
 
-    for (int k = 0; k < maxHeight; ++k) {
-        for (int x = 0; x < (upperBound - lowerBound) + 1; ++x) {
-            if (lengths[x] < (maxHeight - k)) {
+    for (int i = 0; i < maxHeight; ++i) {
+        for (int j = 0; j < (upperBound - lowerBound) + 1; ++j) {
+            if (lengths[j] < (maxHeight - i)) {
                 printf(" \t");
             } else
                 printf("■\t");
@@ -56,8 +56,8 @@ int main() {
     }
 
     // Print horizontal axis units
-    for (int j = 0; j < (upperBound - lowerBound) + 1; ++j) {
-        printf("%d\t", j + 1);
+    for (int i = 0; i < (upperBound - lowerBound) + 1; ++i) {
+        printf("%d\t", i + 1);
     }
 
     printf("\n");
