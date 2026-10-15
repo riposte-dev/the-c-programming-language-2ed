@@ -4,8 +4,7 @@
 #define MAX_LENGTH 20 // Maximum length of a word to measure
 
 int main() {
-    int c, lowerBound, upperBound;
-    int length = 0;
+    int c, length = 0;
 
     // Initialize array
     int lengths[MAX_LENGTH];
@@ -22,6 +21,8 @@ int main() {
             // Inside word
             ++length;
     }
+
+    int lowerBound, upperBound;
 
     // Find lower and upper bounds (So that the histogram isn't largely empty space)
     for (int n = 0; n < MAX_LENGTH; ++n) {
