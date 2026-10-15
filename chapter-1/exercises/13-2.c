@@ -46,18 +46,19 @@ int main() {
     printf("Word Lengths\n"); // Print heading
 
     for (int i = 0; i < maxHeight; ++i) {
-        for (int j = 0; j < (upperBound - lowerBound) + 1; ++j) {
+        for (int j = lowerBound; j <= upperBound; ++j) {
             if (lengths[j] < (maxHeight - i)) {
                 printf(" \t");
-            } else
+            } else {
                 printf("■\t");
+            }
         }
 
         printf("\n");
     }
 
     // Print horizontal axis units
-    for (int i = 0; i < (upperBound - lowerBound) + 1; ++i) {
+    for (int i = lowerBound; i <= upperBound; ++i) {
         printf("%d\t", i + 1);
     }
 
