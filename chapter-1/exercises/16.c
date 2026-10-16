@@ -20,7 +20,7 @@ int main()
             copy(longest, line);
         }
     if (max > 0) /* there was a line */
-        printf("%s", longest);
+        printf("%d", max - 1); /* exclude '\0' from length */
     return 0;
 }
 
