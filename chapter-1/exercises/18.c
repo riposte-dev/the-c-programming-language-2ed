@@ -13,12 +13,13 @@ int main() {
             continue;
         }
 
-        for (int i = len; i > 0; --i) {
+        for (int i = 0; i < len; ++i) {
             if (line[i - 1] == ' ') {
                 continue;
             }
             printf("%c", line[i - 1]);
         }
+        putchar('\n');
     }
     return 0;
 }
