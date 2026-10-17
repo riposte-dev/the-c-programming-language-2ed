@@ -15,7 +15,7 @@ int main()
 
     max = 0;
     while ((len = get_line(line, MAXLINE)) > 0)
-        if (len > 80) {
+        if (len - 1 > 80) { /* subtract one to exclude '\0' */
             printf("%s", line);
         }
     putchar('\n');
