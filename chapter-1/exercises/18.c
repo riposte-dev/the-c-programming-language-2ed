@@ -16,7 +16,6 @@ int main() {
         for (int i = len; i > 0; --i) {
             printf("%c", line[i - 1]);
         }
-        putchar('\n');
     }
     return 0;
 }
