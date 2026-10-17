@@ -3,7 +3,6 @@
 #define MAXLINE 1000 /* maximum input line size */
 
 int get_line(char line[], int maxline);
-void copy(char to[], char from[]);
 
 /* print longest input line */
 int main()
@@ -35,14 +34,4 @@ int get_line(char s[], int lim)
     }
     s[i] = '\0';
     return i;
-}
-
-/* copy: copy 'from' into 'to'; assume to is big enough */
-void copy(char to[], char from[])
-{
-    int i;
-
-    i = 0;
-    while ((to[i] = from[i]) != '\0')
-        ++i;
 }
