@@ -9,6 +9,10 @@ int main() {
     char line[MAXLINE]; /* current input line */
 
     while ((len = get_line(line, MAXLINE))) {
+        if (len == 1) {
+            continue;
+        }
+
         for (int i = len; i >= 0; --i) {
             printf("%c", line[i - 1]);
         }
