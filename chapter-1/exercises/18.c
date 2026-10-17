@@ -8,10 +8,12 @@ int main() {
     int len; /* current line length */
     char line[MAXLINE]; /* current input line */
 
-    while ((len = get_line(line, MAXLINE)) > 0)
-        if (len - 1 > 80) { /* subtract one to exclude '\0' */
-            printf("%s", line);
+    while ((len = get_line(line, MAXLINE))) {
+        for (int i = len; i >= 0; --i) {
+            printf("%c", line[i - 1]);
         }
+        putchar('\n');
+    }
     return 0;
 }
 
