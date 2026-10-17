@@ -8,11 +8,8 @@ int get_line(char line[], int maxline);
 int main()
 {
     int len; /* current line length */
-    int max; /* maximum length seen so far */
     char line[MAXLINE]; /* current input line */
-    char longest[MAXLINE]; /* longest line saved here */
 
-    max = 0;
     while ((len = get_line(line, MAXLINE)) > 0)
         if (len - 1 > 80) { /* subtract one to exclude '\0' */
             printf("%s", line);
