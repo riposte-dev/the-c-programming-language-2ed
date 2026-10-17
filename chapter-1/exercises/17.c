@@ -15,12 +15,10 @@ int main()
 
     max = 0;
     while ((len = get_line(line, MAXLINE)) > 0)
-        if (len > max) {
-            max = len;
-            copy(longest, line);
+        if (len > 80) {
+            printf("%s", line);
         }
-    if (max > 0) /* there was a line */
-        printf("%d", max - 1); /* exclude '\0' from length */
+    putchar('\n');
     return 0;
 }
 
