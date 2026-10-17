@@ -1,5 +1,7 @@
 # The C Programming Language (2nd Edition)
-A repository made for self-study! It contains coding examples and exercises from the second edition of the book *The C Programming Language* by Brian Kernighan and Dennis Ritchie.
+A repository made for independent study of C. It contains coding examples and exercises from the second edition of [*The C Programming Language*](https://en.wikipedia.org/wiki/The_C_Programming_Language).
+
+Please keep in mind that my solutions to the exercises may not necessarily be *good* solutions. There are tons of other resources for that!
 
 ## Setting Up
 To write code, we need a code editor! Install [VS Code](https://code.visualstudio.com/), a popular integrated development environment (IDE).
