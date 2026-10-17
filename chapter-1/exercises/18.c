@@ -14,6 +14,9 @@ int main() {
         }
 
         for (int i = len; i > 0; --i) {
+            if (line[i - 1] == ' ') {
+                continue;
+            }
             printf("%c", line[i - 1]);
         }
     }
